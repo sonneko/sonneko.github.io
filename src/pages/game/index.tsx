@@ -1,6 +1,6 @@
 function Game() {
     return (
-        <h1>Hello</h1>
+        <h1>This is Game Page Index.</h1>
     )
 }
 

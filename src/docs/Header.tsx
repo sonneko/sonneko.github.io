@@ -1,3 +1,6 @@
+import "./css/Header.css";
+import { Link } from "react-router-dom";
+
 function Header() {
     return (
         <header>
@@ -5,11 +8,11 @@ function Header() {
                 <h1>Sonnekoのサイト</h1>
                 <nav className="navigation">
                     <ul>
-                        <li><a className="listItem" href="/">Home</a></li>
-                        <li><a className="listItem" href="/intro">Intro</a></li>
-                        <li><a className="listItem" href="/links">Links</a></li>
-                        <li><a className="listItem" href="/blog">Blog</a></li>
-                        <li><a className="listItem" href="/game">Game</a></li>
+                        <li><Link className="listItem" to="/">Home</Link></li>
+                        <li><Link className="listItem" to="/intro">Intro</Link></li>
+                        <li><Link className="listItem" to="/links">Links</Link></li>
+                        <li><Link className="listItem" to="/blog">Blog</Link></li>
+                        <li><Link className="listItem" to="/game">Game</Link></li>
                     </ul>
                 </nav>
                 <div className="hamburgerBtn">
@@ -18,11 +21,11 @@ function Header() {
                     <span></span>
                 </div>
                 <div className="hamburgerMenu">
-                    <li><a className="listItem" href="/">Home</a></li>
-                    <li><a className="listItem" href="/intro">Intro</a></li>
-                    <li><a className="listItem" href="/links">Links</a></li>
-                    <li><a className="listItem" href="/blog">Blog</a></li>
-                    <li><a className="listItem" href="/game">Game</a></li>
+                    <li><Link className="listItem" to="/">Home</Link></li>
+                    <li><Link className="listItem" to="/intro">Intro</Link></li>
+                    <li><Link className="listItem" to="/links">Links</Link></li>
+                    <li><Link className="listItem" to="/blog">Blog</Link></li>
+                    <li><Link className="listItem" to="/game">Game</Link></li>
                 </div>
             </div>
         </header>

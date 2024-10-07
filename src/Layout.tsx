@@ -1,12 +1,13 @@
 // from my docs components
+import { Outlet } from "react-router-dom";
 import Footer from "./docs/Footer";
 import Header from "./docs/Header";
 
-function Layout({children}: {children: React.ReactNode}) {
+function Layout() {
     return (
         <div>
             <Header />
-            {children}
+            <Outlet />
             <Footer />
         </div>
     )

@@ -7,6 +7,7 @@ import Intro from "./pages/Intro";
 import Links from "./pages/Links";
 import Game from "./pages/game/index";
 import Blog from "./pages/blog/index";
+import EachBlog from "./pages/blog/dynamic";
 
 // from my layout components
 import Layout from "./Layout";
@@ -15,25 +16,28 @@ import Layout from "./Layout";
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      {/* home pages */}
-      <Route path="/" element={<Layout><Home /></Layout>} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
 
-      {/* root directry pages */}
-      <Route path="/intro" element={<Layout><Intro /></Layout>} />
-      <Route path="/links" element={<Layout><Links /></Layout>} />
+          {/* home pages */}
+          <Route path="/" element={<Home />} />
 
-      {/* blog pages */}
-      <Route path="/blog" element={<Layout><Blog /></Layout>} />
+          {/* root directry pages */}
+          <Route path="/intro" element={<Intro />} />
+          <Route path="/links" element={<Links />} />
 
-      {/* game pages */}
-      <Route path="/game" element={<Layout><Game /></Layout>} />
+          {/* blog pages */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<EachBlog />} />
 
-      {/* 404 page */}
-      <Route path="*" element={<Layout><Home /></Layout>} />
-      
-    </Routes>
-  </BrowserRouter>
+          {/* game pages */}
+          <Route path="/game" element={<Game />} />
+
+          {/* 404 page */}
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
