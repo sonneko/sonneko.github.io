@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,16 +8,20 @@
   <title>sonnekoサイト</title>
   <link rel="stylesheet" href="loader.css">
 </head>
+
 <body>
   <div id="root" style="display: none;"></div>
   <script type="module" src="/src/main.tsx"></script>
   <div id="loading">
-    <div class="wrapper"><div class="loader"></div></div>
+    <div class="loading-wrapper">
+      <div class="loader"></div>
+    </div>
     <div class="title"><span></span></div>
   </div>
 </body>
 <script>
-  window.onload = function () {
+  // loading画面から切り替え
+  window.onload = () => {
     document.getElementById("loading").style.display = "none";
     document.getElementById("root").style.display = "block";
   };
