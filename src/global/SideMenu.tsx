@@ -3,11 +3,13 @@ import List from '@mui/material/List'
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeIcon from '@mui/icons-material/Home';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import BookIcon from '@mui/icons-material/Book';
 import CodeIcon from '@mui/icons-material/Code';
+import Box from '@mui/material/Box';
 
+import SocialLinks from '../components/SocialLinks';
 import { Link } from 'react-router-dom';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
@@ -17,7 +19,7 @@ const SideMenu: React.FC = () => {
             <List component="nav">
                 <ListItemButton component={Link} to="/">
                     <ListItemIcon>
-                    <DashboardIcon />
+                    <HomeIcon />
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </ListItemButton>
@@ -46,6 +48,9 @@ const SideMenu: React.FC = () => {
                     <ListItemText primary="Blog" />
                 </ListItemButton>
             </List>
+            <Box>
+                <SocialLinks />
+            </Box>
         </>
     );
 };
