@@ -48,7 +48,10 @@ const SideMenu: React.FC = () => {
                     <ListItemText primary="Blog" />
                 </ListItemButton>
             </List>
-            <Box>
+            <Box sx={{
+                position: "absolute",
+                bottom: "0"
+            }}>
                 <SocialLinks />
             </Box>
         </>

@@ -9,7 +9,7 @@ function SocialLinks() {
     return (
         <>
             <List component="nav">
-                <ListItemButton component="a" href="/">
+                <ListItemButton component="a" href="https://x.com/sonneko99">
                     <ListItemIcon>
                         <XIcon />
                     </ListItemIcon>
