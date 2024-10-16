@@ -20,7 +20,7 @@ function Home() {
     return (
         <>
             <div className="home">
-                <Doc.DocumentIndex></Doc.DocumentIndex>
+                <Doc.DocumentIndex />
                 <Doc.DocumentWrapper>
                     <div className="title">
                         <Heading scale={1}>Sonnekoのサイト</Heading>
