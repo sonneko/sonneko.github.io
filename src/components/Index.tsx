@@ -2,6 +2,11 @@ import Error from "./mini/Error";
 
 import './css/Index.css'
 
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 function Index() {
     // 要素取得
     const documentWrapperEle = document.getElementById("documentWrapper");
@@ -24,9 +29,24 @@ function Index() {
     })
     return (
         <>
-            <ul>
-                {headingList}
-            </ul>
+            <Accordion
+                sx={{
+                    width: "70%",
+                }}
+            >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1-content"
+                    id="index-accordion"
+                >
+                    目次
+                </AccordionSummary>
+                <AccordionDetails>
+                    <ul>
+                        {headingList}
+                    </ul>
+                </AccordionDetails>
+            </Accordion>
         </>
     )
 }

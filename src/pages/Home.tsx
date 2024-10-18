@@ -19,8 +19,7 @@ function Card({ title, content }: { title: string, content: string }) {
 function Home() {
     return (
         <>
-            <div className="home">
-                <Doc.DocumentIndex />
+            <Doc.Document pageTitle={"ホーム"} ogpImagePath="/image/ogp/sonneko_ogp.png">
                 <Doc.DocumentWrapper>
                     <div className="title">
                         <Heading scale={1}>Sonnekoのサイト</Heading>
@@ -32,7 +31,7 @@ function Home() {
                         <Card title="最近何してる？" content="c++を勉強しています。Pythonとかでバックエンドもやりたい。" />
                     </div>
                 </Doc.DocumentWrapper>
-            </div>
+            </Doc.Document>
         </>
     )
 }
