@@ -14,17 +14,16 @@ import Develop from "./pages/Develop";
 import Layout from "./Layout";
 import NotFound from "./global/NotFound";
 
-import { createContext } from 'react'
+import GlobalContext from "./global/globalContext";
+import GlobalContextClass from "./class/global";
 
-
-const Context = createContext<string>("")
 
 
 // react router dom routing
 function App() {
   return (
     <BrowserRouter>
-      <Context.Provider value="">
+      <GlobalContext.Provider value={new GlobalContextClass()}>
         <Routes>
           {/* home pages */}
           <Route path="/" element={<Layout title="Home"><Home /></Layout>} />
@@ -44,7 +43,7 @@ function App() {
           {/* 404 page */}
           <Route path="*" element={<Layout title="404 not found"><NotFound /></Layout>} />
         </Routes>
-      </Context.Provider>
+        </GlobalContext.Provider>
     </BrowserRouter>
   )
 }

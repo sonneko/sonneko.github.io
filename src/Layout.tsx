@@ -1,13 +1,16 @@
+import { useContext } from "react";
+import GlobalContext from "./global/globalContext";
 import DesktopLayout from "./DesktopLayout";
 import MobileLayout from "./MobileLayout";
 
 
 function Layout({ children, title }: { children: React.ReactNode, title: String }) {
-    // 画面幅からデバイスを判定
-    let device = window.matchMedia("(max-width: 768px)").matches ? "mobile" : "desktop";
+    const contextData = useContext(GlobalContext);
+    
+    const device = contextData.userDevice;
 
     // return
-    if (device == "desktop") {
+    if (device == "tablet") {
         return (
             <>
                 <DesktopLayout title={title}>
@@ -15,10 +18,18 @@ function Layout({ children, title }: { children: React.ReactNode, title: String 
                 </DesktopLayout>
             </>
         )
-    } else if (device == "mobile") {
+    } else if (device == "pc") {
         return (
             <>
-                <MobileLayout>
+                <DesktopLayout title={title}>
+                    {children}
+                </DesktopLayout>
+            </>
+        )
+    } else if (device == "phone") {
+        return (
+            <>
+                <MobileLayout title={title}>
                     {children}
                 </MobileLayout>
             </>

@@ -31,17 +31,23 @@ function DocumentWrapper({ children }: { children: React.ReactNode }) {
     )
 }
 
-function Document({children, pageTitle, ogpImagePath} : {children: React.ReactNode, pageTitle: String, ogpImagePath: string}) {
+function Document({children, pageTitle, ogpImagePath, isIndent, isRoutingDisplay} : {children: React.ReactNode, pageTitle: String, ogpImagePath: string, isIndent: boolean , isRoutingDisplay: boolean }) {
+    if (isIndent == undefined) {
+        isIndent = false;
+    }
+    if (isRoutingDisplay == undefined) {
+        isRoutingDisplay = false;
+    }
     return (
         <>
             <div className="header">
                 <Heading scale={1}>{pageTitle}</Heading>
-                <RoutingDisplay />
+                {isRoutingDisplay ? <RoutingDisplay /> : <></>}
                 <div className="header-ogpImage-container">
                     <img src={ogpImagePath} style={{width: "100%"}}/>
                 </div>
             </div>
-            <DocumentIndex />
+            {isIndent ? <DocumentIndex /> : <></>}
             {children}
             <div className="footer">
 
@@ -72,7 +78,7 @@ function DocumentIndex() {
                 >
                     目次
                 </AccordionSummary>
-                <AccordionDetails></AccordionDetails>
+                <AccordionDetails />
             </Accordion>
         </>
     )
