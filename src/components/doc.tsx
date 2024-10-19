@@ -44,7 +44,7 @@ function Document({children, pageTitle, ogpImagePath, isIndent, isRoutingDisplay
                 <Heading scale={1}>{pageTitle}</Heading>
                 {isRoutingDisplay ? <RoutingDisplay /> : <></>}
                 <div className="header-ogpImage-container">
-                    <img src={ogpImagePath} style={{width: "100%"}}/>
+                    <img src={ogpImagePath} style={{width: "100%"}} height={600}/>
                 </div>
             </div>
             {isIndent ? <DocumentIndex /> : <></>}

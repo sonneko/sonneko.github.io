@@ -19,7 +19,7 @@ function Card({ title, content }: { title: string, content: string }) {
 function Home() {
     return (
         <>
-            <Doc.Document pageTitle="ホーム" ogpImagePath="/image/icons/sonneko.png" isIndent={false} isRoutingDisplay={false}>
+            <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>
                 <Doc.DocumentWrapper>
                     <div className="title">
                         <Heading scale={1}>Sonnekoのサイト</Heading>
