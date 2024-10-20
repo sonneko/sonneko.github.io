@@ -75,7 +75,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-function MobileLayout({children, title}: {children: React.ReactNode, title: String}) {
+function MobileLayout({ children, title }: { children: React.ReactNode, title: String }) {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -132,6 +132,7 @@ function MobileLayout({children, title}: {children: React.ReactNode, title: Stri
           <SideMenu />
         </Drawer>
         <Main open={open}>
+          <Toolbar />
           {children}
         </Main>
       </Box>

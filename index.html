@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>sonnekoサイト</title>
   <meta name="description" content="Sonnekoの手作りホームページ。Sonnekoは、科学や技術などが好きな高校生。興味を持たれた方は、Xアカウントをフォロー！">
@@ -30,20 +29,60 @@
 
 <body>
   <div id="root" style="display: none;"></div>
-  <script type="module" src="/src/main.tsx"></script>
   <div id="loading">
     <div class="loading-wrapper">
       <div class="loader"></div>
     </div>
     <div class="title"><span></span></div>
   </div>
+  <div id="props-toReact" style="display: none;"></div>
+  <div id="props-toNative" style="display: none;"></div>
 </body>
 <script>
-  // loading画面から切り替え
   window.onload = () => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("root").style.display = "block";
+    // URL parameter 取得
+    const query = window.location.search;
+    const params = query.split('?')[1].split('&').map((item) => {
+      const [key, value] = item.split('=');
+      return { key: key, value: value };
+    });
+
+    // params.pathが存在したら、props-toReactに代入してReactに渡す
+    let paramsExit = false;
+    params.forEach((item, index) => {
+      if (item.key == 'path') {
+        document.getElementById('props').innerText = item.value;
+        paramsExit = true;
+      }
+    });
+
+    if (paramsExit) {
+      // props-toNativeを監視
+      document.getElementById('props-toNative').addEventListener('DOMSubtreeModified', () => {
+        // props-toNativeの内容を取得
+        const nativeProps = document.getElementById('props-toNative').innerText;
+
+        // レンダリング終了の合図を受け取ったら
+        if (nativeProps == 'rendering-finish') {
+          // ローディング画面の解消
+          document.getElementById('loading').style.display = 'none';
+          document.getElementById('root').style.display = 'block';
+
+          // ローディング画面の終了を伝える
+          document.getElementById('props-toReact').innerText = 'finish-loading';
+        }
+      });
+    } else {
+      // "/"のページだったら
+
+      // "/"であることを伝える
+      document.getElementById('props-toReact').innerText = 'requested-rootPage';
+
+      // ローディング画面の解消
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('root').style.display = 'block';
+    }
   };
 </script>
-
+<script type="module" src="/src/main.tsx"></script>
 </html>

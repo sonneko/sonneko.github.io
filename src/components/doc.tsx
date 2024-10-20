@@ -31,7 +31,7 @@ function DocumentWrapper({ children }: { children: React.ReactNode }) {
     )
 }
 
-function Document({children, pageTitle, ogpImagePath, isIndent, isRoutingDisplay} : {children: React.ReactNode, pageTitle: String, ogpImagePath: string, isIndent: boolean , isRoutingDisplay: boolean }) {
+function Document({ children, pageTitle, ogpImagePath, isIndent, isRoutingDisplay }: { children: React.ReactNode, pageTitle: String, ogpImagePath: string | null, isIndent: boolean, isRoutingDisplay: boolean }) {
     if (isIndent == undefined) {
         isIndent = false;
     }
@@ -43,9 +43,9 @@ function Document({children, pageTitle, ogpImagePath, isIndent, isRoutingDisplay
             <div className="header">
                 <Heading scale={1}>{pageTitle}</Heading>
                 {isRoutingDisplay ? <RoutingDisplay /> : <></>}
-                <div className="header-ogpImage-container">
-                    <img src={ogpImagePath} style={{width: "100%"}} height={600}/>
-                </div>
+                {ogpImagePath != null ? <div className="header-ogpImage-container">
+                    <img src={ogpImagePath} style={{ width: "100%", height: "auto" }} />
+                </div> : <></>}
             </div>
             {isIndent ? <DocumentIndex /> : <></>}
             {children}
