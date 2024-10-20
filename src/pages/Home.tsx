@@ -2,6 +2,8 @@
 import Heading from "../components/mini/heading";
 import "./css/Home.css";
 import * as Doc from '../components/doc'
+import { useEffect } from "react";
+import { redirect } from "react-router-dom";
 
 function Card({ title, content }: { title: string, content: string }) {
     return (
@@ -17,6 +19,25 @@ function Card({ title, content }: { title: string, content: string }) {
 }
 
 function Home() {
+    useEffect(() => {
+        // URL parameter 取得
+        const query = window.location.search;
+        const params = query.split('?')[1].split('&').map((item) => {
+            const [key, value] = item.split('=');
+            return { key: key, value: value };
+        });
+
+        // params.pathが存在したら、props-toReactに代入してReactに渡す
+        let targetPath: string | null = null;
+        params.forEach((item) => {
+            if (item.key == 'path') {
+                targetPath = item.value;
+            }
+        });
+        if (targetPath != null) {
+            redirect(targetPath);
+        }
+    }, []);
     return (
         <>
             <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>

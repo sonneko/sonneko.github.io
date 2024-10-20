@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sonnekoサイト</title>
+  <title>sonnekoサイト（index.html）</title>
   <meta name="description" content="Sonnekoの手作りホームページ。Sonnekoは、科学や技術などが好きな高校生。興味を持たれた方は、Xアカウントをフォロー！">
   <link rel="stylesheet" href="loader.css">
   <meta name="twitter:card" content="summary_large_image" />
@@ -29,6 +29,7 @@
 
 <body>
   <div id="root" style="display: none;"></div>
+  <script type="module" src="/src/main.tsx"></script>
   <div id="loading">
     <div class="loading-wrapper">
       <div class="loader"></div>
@@ -40,49 +41,8 @@
 </body>
 <script>
   window.onload = () => {
-    // URL parameter 取得
-    const query = window.location.search;
-    const params = query.split('?')[1].split('&').map((item) => {
-      const [key, value] = item.split('=');
-      return { key: key, value: value };
-    });
-
-    // params.pathが存在したら、props-toReactに代入してReactに渡す
-    let paramsExit = false;
-    params.forEach((item, index) => {
-      if (item.key == 'path') {
-        document.getElementById('props').innerText = item.value;
-        paramsExit = true;
-      }
-    });
-
-    if (paramsExit) {
-      // props-toNativeを監視
-      document.getElementById('props-toNative').addEventListener('DOMSubtreeModified', () => {
-        // props-toNativeの内容を取得
-        const nativeProps = document.getElementById('props-toNative').innerText;
-
-        // レンダリング終了の合図を受け取ったら
-        if (nativeProps == 'rendering-finish') {
-          // ローディング画面の解消
-          document.getElementById('loading').style.display = 'none';
-          document.getElementById('root').style.display = 'block';
-
-          // ローディング画面の終了を伝える
-          document.getElementById('props-toReact').innerText = 'finish-loading';
-        }
-      });
-    } else {
-      // "/"のページだったら
-
-      // "/"であることを伝える
-      document.getElementById('props-toReact').innerText = 'requested-rootPage';
-
-      // ローディング画面の解消
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('root').style.display = 'block';
-    }
+    document.getElementById("root").style.display = "block";
+    document.getElementById("loading").style.display = "none";
   };
 </script>
-<script type="module" src="/src/main.tsx"></script>
 </html>
