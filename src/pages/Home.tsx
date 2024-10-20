@@ -3,7 +3,7 @@ import Heading from "../components/mini/heading";
 import "./css/Home.css";
 import * as Doc from '../components/doc'
 import { useEffect } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Card({ title, content }: { title: string, content: string }) {
     return (
@@ -19,6 +19,7 @@ function Card({ title, content }: { title: string, content: string }) {
 }
 
 function Home() {
+    const navigate = useNavigate();
     useEffect(() => {
         // URL parameter 取得
         const query = window.location.search;
@@ -35,9 +36,9 @@ function Home() {
             }
         });
         if (targetPath != null) {
-            redirect(targetPath);
+            navigate(targetPath);
         }
-    }, []);
+    }, [navigate]);
     return (
         <>
             <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>
