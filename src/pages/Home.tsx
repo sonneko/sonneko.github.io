@@ -26,24 +26,28 @@ function Home() {
         // URL parameter 取得
         const query = window.location.search;
         const paramsStr = query.split('?')
-        if (paramsStr.length <= 1) return;
-        const params = paramsStr[1].split('&').map((item) => {
-            const [key, value] = item.split('=');
-            return { key: key, value: value };
-        });
 
-        // params.pathが存在したら、props-toReactに代入してReactに渡す
-        let targetPath: string | null = null;
-        params.forEach((item) => {
-            if (item.key == 'path') {
-                targetPath = item.value;
+        // パラメータがあったら
+        if (paramsStr.length <= 1) {
+            // パラメータ取得
+            const params = paramsStr[1].split('&').map((item) => {
+                const [key, value] = item.split('=');
+                return { key: key, value: value };
+            });
+
+            // pathパラメータがあれば、そのパスに遷移
+            let targetPath: string | null = null;
+            params.forEach((item) => {
+                if (item.key == 'path') {
+                    targetPath = item.value;
+                }
+            });
+            if (targetPath != null) {
+                navigate(targetPath);
             }
-        });
-        if (targetPath != null) {
-            navigate(targetPath);
         }
     }, [navigate]);
-    
+
     return (
         <>
             <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>
