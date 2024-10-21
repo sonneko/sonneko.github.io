@@ -19,11 +19,15 @@ function Card({ title, content }: { title: string, content: string }) {
 }
 
 function Home() {
+
+    // URLparameterを参照し、React内でページ遷移
     const navigate = useNavigate();
     useEffect(() => {
         // URL parameter 取得
         const query = window.location.search;
-        const params = query.split('?')[1].split('&').map((item) => {
+        const paramsStr = query.split('?')
+        if (paramsStr.length <= 1) return;
+        const params = paramsStr[1].split('&').map((item) => {
             const [key, value] = item.split('=');
             return { key: key, value: value };
         });
@@ -39,6 +43,7 @@ function Home() {
             navigate(targetPath);
         }
     }, [navigate]);
+    
     return (
         <>
             <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>
