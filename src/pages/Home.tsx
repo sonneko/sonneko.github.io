@@ -16,19 +16,19 @@ function Header() {
 
     const styles = {
         h1: {
-            textAlign: "center",
+            textAlign: 'center' as 'center',
             fontSize: device == "pc" ? "40px" : device == "tablet" ? "35px" : "29px",
             marginBottom: "0"
         },
         imgDiv: {
-            textAlign: "center",
+            textAlign: "center" as 'center',
         },
         desc: {
-            textAlign: "center",
+            textAlign: "center" as 'center',
             fontSize: device == "pc" ? "32px" : device == "tablet" ? "27px" : "22px"
         },
         buttonWrap: {
-            textAlign: "center",
+            textAlign: "center" as 'center',
             margin: "1rem"
         },
         button: {

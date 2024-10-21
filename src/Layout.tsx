@@ -3,7 +3,7 @@ import GlobalContext from "./global/globalContext";
 import DesktopLayout from "./DesktopLayout";
 import MobileLayout from "./MobileLayout";
 
-function Layout({ children, title }: { children: React.ReactNode, title: String }) {
+function Layout({ children, title }: { children: React.ReactNode, title: string }) {
     const contextData = useContext(GlobalContext);
 
 
