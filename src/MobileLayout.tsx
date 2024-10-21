@@ -12,6 +12,7 @@ import theme from './global/theme';
 import SideMenu from './global/SideMenu';
 import Drawer from '@mui/material/Drawer';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Container } from '@mui/material';
 
 
 const drawerWidth = 240;
@@ -20,7 +21,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme }) => ({
   flexGrow: 1,
-  padding: theme.spacing(3),
+  padding: theme.spacing(0),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -75,7 +76,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-function MobileLayout({ children, title }: { children: React.ReactNode, title: String }) {
+function MobileLayout({ children, title }: { children: React.ReactNode, title: string }) {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -109,6 +110,15 @@ function MobileLayout({ children, title }: { children: React.ReactNode, title: S
             <Typography variant="h6" noWrap component="div">
               {title}
             </Typography>
+            <Typography
+              component="h1"
+              variant="h6"
+              color='inherit'
+              noWrap
+              sx={{ flexGrow: 1, textAlign: 'right' }}
+            >
+              {'Sonneko’s Site'}
+            </Typography>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -131,9 +141,30 @@ function MobileLayout({ children, title }: { children: React.ReactNode, title: S
           </DrawerHeader>
           <SideMenu />
         </Drawer>
-        <Main open={open}>
+        <Main
+          open={open}
+          sx={{
+            backgroundColor: (theme) =>
+              theme.palette.mode === 'light'
+                ? theme.palette.grey[100]
+                : theme.palette.grey[900],
+            flexGrow: 1,
+            height: '100vh',
+            overflow: 'auto',
+          }}
+        >
           <Toolbar />
-          {children}
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            {children}
+            <Box mt={4}>
+              <Typography variant="body2" color="text.secondary" align="center" >
+                {'Copyright © sonneko '}
+                {new Date().getFullYear()}
+                {'.'}
+              </Typography>
+            </Box>
+          </Container>
+
         </Main>
       </Box>
     </ThemeProvider>

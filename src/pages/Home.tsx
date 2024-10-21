@@ -1,22 +1,59 @@
 // import my css
-import Heading from "../components/mini/heading";
 import "./css/Home.css";
-import * as Doc from '../components/doc'
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
-function Card({ title, content }: { title: string, content: string }) {
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
+
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+
+import GlobalContext from "../global/globalContext";
+
+function Header() {
+    const globalContext = useContext(GlobalContext)
+    const device = globalContext.userDevice;
+
+    const styles = {
+        h1: {
+            textAlign: "center",
+            fontSize: device == "pc" ? "40px" : device == "tablet" ? "35px" : "29px",
+            marginBottom: "0"
+        },
+        imgDiv: {
+            textAlign: "center",
+        },
+        desc: {
+            textAlign: "center",
+            fontSize: device == "pc" ? "32px" : device == "tablet" ? "27px" : "22px"
+        },
+        buttonWrap: {
+            textAlign: "center",
+            margin: "1rem"
+        },
+        button: {
+            padding: device == "phone" ? "" : "1rem 4rem"
+        }
+    }
     return (
-        <div style={{ marginTop: "60px" }}>
-            <Heading scale={2}>{title}</Heading>
-            <p style={{
-                marginTop: "10px",
-                marginBottom: "10px",
-                marginLeft: "10px"
-            }}>{content}</p>
-        </div>
+        <>
+            <div style={styles.imgDiv}>
+                <img alt="sonnekoのアイコン" src="/image/icons/sonneko.png" width={200} height={200} />
+            </div>
+            <h1 style={styles.h1}>Sonneko’s Site</h1>
+            <Typography sx={styles.desc}>
+                Sonnekoのしていることを紹介していくホームページ
+            </Typography>
+            <div style={styles.buttonWrap}>
+                <ButtonGroup size="large" aria-label="Large button group" variant="contained">
+                    <Button key="one" sx={styles.button}>自分について</Button>
+                    <Button key="two" sx={styles.button}>目次を見る！</Button>
+                </ButtonGroup>
+            </div>
+        </>
     )
 }
+
 
 function Home() {
 
@@ -51,19 +88,7 @@ function Home() {
 
     return (
         <>
-            <Doc.Document pageTitle="ホーム" ogpImagePath="/image/const-page/sonneko.png" isIndent={false} isRoutingDisplay={false}>
-                <Doc.DocumentWrapper>
-                    <div className="title">
-                        <Heading scale={1}>Sonnekoのサイト</Heading>
-                        <p>Sonnekoが、個人で、遊び半分で作って、完全無料で、運営しているサイトです。</p>
-                    </div>
-                    <div className="contents">
-                        <Card title="Sonnekoって誰？" content="sonnekoは、プログラミング・物理・数学・生物などに興味を持っている高校生です。" />
-                        <Card title="何のためにサイトを作ったの？" content="ひとえに、練習のためです。Reactの練習をしたかったのです。また、作ったものを公開する場所としての役割もあります。" />
-                        <Card title="最近何してる？" content="c++を勉強しています。Pythonとかでバックエンドもやりたい。" />
-                    </div>
-                </Doc.DocumentWrapper>
-            </Doc.Document>
+            <Header />
         </>
     )
 }

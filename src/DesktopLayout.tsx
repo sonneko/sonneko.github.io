@@ -65,7 +65,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 type LayoutProps = {
-    title: String;
+    title: string;
     children: React.ReactNode;
 };
 
@@ -107,6 +107,15 @@ const DesktopLayout: React.FC<LayoutProps> = ({ title, children }) => {
                             sx={{ flexGrow: 1 }}
                         >
                             {title}
+                        </Typography>
+                        <Typography
+                            component="h1"
+                            variant="h6"
+                            color='inherit'
+                            noWrap
+                            sx={{ flexGrow: 1, textAlign: 'right' }}
+                        >
+                            {'Sonneko’s Site'}
                         </Typography>
                     </Toolbar>
                 </AppBar>
