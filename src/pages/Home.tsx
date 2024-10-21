@@ -28,7 +28,7 @@ function Home() {
         const paramsStr = query.split('?')
 
         // パラメータがあったら
-        if (paramsStr.length <= 1) {
+        if (!(paramsStr.length <= 1)) {
             // パラメータ取得
             const params = paramsStr[1].split('&').map((item) => {
                 const [key, value] = item.split('=');
@@ -43,6 +43,7 @@ function Home() {
                 }
             });
             if (targetPath != null) {
+                // ページ遷移
                 navigate(targetPath);
             }
         }
