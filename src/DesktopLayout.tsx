@@ -115,7 +115,7 @@ const DesktopLayout: React.FC<LayoutProps> = ({ title, children }) => {
                             noWrap
                             sx={{ flexGrow: 1, textAlign: 'right' }}
                         >
-                            {'Sonneko’s Site'}
+                            {'Sonneko’s HP'}
                         </Typography>
                     </Toolbar>
                 </AppBar>

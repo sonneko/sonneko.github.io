@@ -19,7 +19,7 @@ function Links() {
                         <ListItem>
                             <Heading scale={3}>Web関係</Heading>
                             <Typography variant="body1" gutterBottom>
-                                
+                                ちょとだけチャットシステム
                             </Typography>
                         </ListItem>
                     </List>

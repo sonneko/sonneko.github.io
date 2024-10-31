@@ -117,7 +117,7 @@ function MobileLayout({ children, title }: { children: React.ReactNode, title: s
               noWrap
               sx={{ flexGrow: 1, textAlign: 'right' }}
             >
-              {'Sonneko’s Site'}
+              {'Sonneko’s HP'}
             </Typography>
           </Toolbar>
         </AppBar>

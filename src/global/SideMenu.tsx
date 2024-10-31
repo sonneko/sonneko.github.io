@@ -52,7 +52,7 @@ const SideMenu: React.FC = () => {
                 position: "absolute",
                 bottom: "0"
             }}>
-                <SocialLinks />
+                <SocialLinks version='list' />
             </Box>
         </>
     );
