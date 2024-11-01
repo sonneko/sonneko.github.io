@@ -27,8 +27,14 @@ function Header() {
             fontSize: device == "pc" ? "40px" : device == "tablet" ? "35px" : "29px",
             marginBottom: "0"
         },
+        img: {
+            padding: "0",
+            margin: "0",
+            border: "1px solid",
+            borderRadius: "50%"
+        },
         imgDiv: {
-            textAlign: "center" as 'center',
+            textAlign: "center" as 'center'
         },
         desc: {
             textAlign: "center" as 'center',
@@ -46,7 +52,7 @@ function Header() {
         <>
             <Space size={4} />
             <div style={styles.imgDiv}>
-                <img alt="sonnekoのアイコン" src="/image/icons/sonneko.png" width={200} height={200} />
+                <img style={styles.img} alt="sonnekoのアイコン" src="/image/icons/sonneko.webp" width={200} height={200} />
             </div>
             <h1 style={styles.h1}>Sonneko’s HP</h1>
             <Typography sx={styles.desc}>

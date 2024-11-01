@@ -10,24 +10,26 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import { Button, IconButton } from '@mui/material';
 import { QiitaIcon } from './icons';
 
+import { Link } from 'react-router-dom'
+
 function SocialLinks({ version }: { version: 'list' | 'menu' | 'btns' }) {
     if (version == 'list') {
         return (
             <>
                 <List component="nav">
-                    <ListItemButton component="a" href="https://x.com/sonneko99" target="_blank">
+                    <ListItemButton component="a" href="https://x.com/sonneko99" target="_blank" aria-label="open drawer">
                         <ListItemIcon>
                             <XIcon />
                         </ListItemIcon>
                         <ListItemText primary="X" />
                     </ListItemButton>
-                    <ListItemButton component="a" href="https://qiita.com/sonneko" target="_blank">
+                    <ListItemButton component="a" href="https://qiita.com/sonneko" target="_blank" aria-label="open drawer">
                         <ListItemIcon>
-                            <img src='/image/icons/qiita-icon.png' width={24} height={24} style={{ opacity: "0.75" }} />
+                            <QiitaIcon sx={{width: "24px", height: "24px"}} />
                         </ListItemIcon>
                         <ListItemText primary="Qiita" />
                     </ListItemButton>
-                    <ListItemButton component="a" href="https://github.com/sonneko" target="_blank">
+                    <ListItemButton component="a" href="https://github.com/sonneko" target="_blank" aria-label="open drawer">
                         <ListItemIcon>
                             <GitHubIcon />
                         </ListItemIcon>
@@ -51,14 +53,14 @@ function SocialLinks({ version }: { version: 'list' | 'menu' | 'btns' }) {
                     }}
                 >
                     <ButtonGroup size="large" aria-label="Large button group">
-                        <IconButton>
+                        <IconButton aria-label="open drawer">
                             <GitHubIcon />
                         </IconButton>
-                        <IconButton>
+                        <IconButton aria-label="open drawer">
                             <XIcon />
                         </IconButton>
-                        <IconButton>
-                            <img src='/image/icons/qiita-icon.png' width={24} height={24} style={{ opacity: "0.75" }} />
+                        <IconButton aria-label="open drawer">
+                            <QiitaIcon sx={{width: "24px", height: "24px"}}/>
                         </IconButton>
                     </ButtonGroup>
                 </Box>
@@ -77,13 +79,13 @@ function SocialLinks({ version }: { version: 'list' | 'menu' | 'btns' }) {
             <>
                 <Box sx={{textAlign: "center" as "center", marginTop: "1rem", opacity: "0.75"}}>
                     <ButtonGroup size="large" color='inherit'>
-                        <Button sx={buttonStyle}>
+                        <Button sx={buttonStyle} aria-label="open drawer" component={Link} to="/links">
                             <GitHubIcon sx={iconStyle} />
                         </Button>
-                        <Button sx={buttonStyle}>
+                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="/links">
                             <XIcon sx={iconStyle} />
                         </Button>
-                        <Button sx={buttonStyle}>
+                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="/links">
                             <QiitaIcon sx={iconStyle} />
                         </Button>
                     </ButtonGroup>

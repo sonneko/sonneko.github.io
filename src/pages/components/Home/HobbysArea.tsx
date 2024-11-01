@@ -12,28 +12,36 @@ function HobbyArea() {
     return (
         <>
             <Space size={1.2} />
-            <Heading scale={4}>代表的な趣味について</Heading>
+            <Heading scale={3}>代表的な趣味について</Heading>
             {[
                 {
-                    title: "プログラミング関係",
+                    title: "情報",
                     content: "主にWeb関係を勉強していますが、Java・C++なども勉強しています。JavaScript関連の技術についてよく知っています。このサイトもReactを使って構成しています。",
                     links: [
                         { path: "/games/sf2024", text: "SF2024ゲーム" }
                     ]
                 },
                 {
-                    title: "c",
-                    content: "dd",
+                    title: "生物",
+                    content: "生物という教科を勉強しています。この中ではもっとも好きな教科です。",
                     links: [
-                        { path: "/games/sf2024", text: "SF2024ゲム" }
+                        { path: "/blogs", text: "「生物について」トップ" }
                     ]
                 },
                 {
-                    title: "dd",
-                    content: "dd",
-                    links: [
-                        { path: "/games/sf2024", text: "SF2024ーム" }
-                    ]
+                    title: "数学",
+                    content: "どちらかといえば、他の勉強のために必要なので勉強しています。得意ではありません。",
+                    links: []
+                },
+                {
+                    title: "化学",
+                    content: "とても苦手なジャンルの一つで、非常に危機感を持っています。一応、一年前に高校範囲は一周したつもりですが、特に、有機化学が怪しいです。",
+                    links: []
+                },
+                {
+                    title: "地学",
+                    content: "最近、はじめたジャンルで、今一番興味を持っています。今、一番勉強しています。",
+                    links: []
                 }
             ].map((item, index) => (
                 <Accordion key={`hobby-list-${index}`}>
