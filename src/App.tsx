@@ -10,7 +10,7 @@ import Blog from "./pages/blog/index";
 import EachBlog from "./pages/blog/dynamic";
 import Develop from "./pages/Develop";
 
-// import SF2024Game from "./pages/game/SF2024Game";
+import SF2024Game from "./pages/game/sf2024/App";
 
 // from my layout components
 import Layout from "./Layout";
@@ -42,7 +42,7 @@ function App() {
 
           {/* game pages */}
           <Route path="/games" element={<Layout title="games"><Game /></Layout>} />
-          {/* <Route path="/games/sf2024" element={<SF2024Game />} /> */}
+          <Route path="/games/sf2024" element={<SF2024Game />} />
 
           {/* 404 page */}
           <Route path="*" element={<Layout title="404 not found"><NotFound /></Layout>} />

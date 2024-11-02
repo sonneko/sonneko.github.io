@@ -4,6 +4,7 @@ class Object {
     position: Pos
     angle: Angle
     element: HTMLElement | null
+
     constructor() {
         this.position = new Pos();
         this.angle = new Angle();

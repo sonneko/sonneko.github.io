@@ -1,6 +1,7 @@
 class Pos {
     x: number | undefined
     y: number | undefined
+
     constructor() {
         this.x = undefined;
         this.y = undefined;

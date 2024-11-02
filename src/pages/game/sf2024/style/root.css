@@ -1,0 +1,46 @@
+.main-title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8rem;
+}
+
+.first-heading{
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+
+.second-heading{
+    margin-top: -2rem;
+    margin-left: 40vw;
+}
+
+.root{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.start-btn{
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.4;
+    text-align: center;
+}
+.start-btn:hover{
+    animation: fadeup 0.5s ease;
+}
+@keyframes fadeup {
+    from{
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(1.7);
+    }
+}

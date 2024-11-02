@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .title {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 6rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 256, 0.1);
+        }
+
+        .h1 {
+            animation: fadeLeft 5s ease-in;
+        }
+
+        .h2 {
+            animation: fadeRight 5s ease-in;
+        }
+
+        #reabiz-content {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #reabiz-content h1 {
+            font-size: 8rem;
+        }
+
+        #reabiz-content p {
+            font-size: 4rem;
+        }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20rem);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            40% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(5);
+            }
+        }
+
+        @keyframes fadeRight {
+            from {
+                opacity: 0;
+                transform: translateX(20rem);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            40% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(5);
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0.2;
+                transform: scale(0.01);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(6);
+            }
+        }
+
+        @keyframes scroller {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-400vh);
+            }
+        }
+
+        #content h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #reabiz-title {
+            animation: fadein 5s ease-in;
+            position: absolute;
+            top: 40vh;
+            left: 42vw;
+        }
+
+        .activeReabizContenet {
+            animation: scroller 30s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1 id="title-h1">Aoristos</h1>
+        <h2 id="title-h2">有志企画</h2>
+    </div>
+    <div id="content">
+        <h1 id="reabiz-title">リアビズについて</h1>
+        <div id="reabiz-content">
+            <h1>リアビズとは？</h1>
+            <p>高校生向けの「模擬企業グランプリ」の一つです。</p>
+            <p>実際に、30万円を資本金として商品を開発・販売し、30万を超えた売り上げは実際に自分たちの利益となります。</p>
+            <p>その大会に、僕たち4人は出場し、「実験キットAoristos」を販売しています。</p>
+            <p>実際に、オンラインで現在も販売しているので、ぜひご購入をお願いいたします。</p>
+            <p>あなた方の購入が、直接コンテストでの成績につながりますので、<br>応援したいという方はぜひ購入ください。</p>
+            <p>後ろにあるQRコードから購入できます！！</p>
+            <h1>商品について</h1>
+            <p>商品は、以下の5種類の実験が入って、1500円となります。</p>
+            <p>
+                <ul>
+                    <li>ピンポン玉浮力実験</li>
+                    <li>ゲーミング反応</li>
+                    <li>ミョウバン結晶作り</li>
+                    <li>シュワシュワ</li>
+                    <li>シークレット</li>
+                </ul>
+            </p>
+            <p></p>
+            <h1></h1>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            const h1ele = document.getElementById('title-h1');
+            const h2ele = document.getElementById('title-h2');
+            const reabizTitleEle = document.getElementById('reabiz-title');
+            const reabizContentEle = document.getElementById('reabiz-content');
+            h1ele.style.display = 'none';
+            h2ele.style.display = 'none';
+            reabizTitleEle.style.display = 'none';
+            reabizContentEle.style.display = 'none';
+            window.setTimeout(() => {
+                h1ele.style.display = 'block';
+                h2ele.style.display = 'block';
+                h1ele.classList.toggle('h1');
+                h2ele.classList.toggle('h2');
+            }, 300);
+            window.setTimeout(() => {
+                h1ele.style.display = 'none';
+                h2ele.style.display = 'none';
+                reabizTitleEle.style.display = 'block';
+            }, 5000);
+            window.setTimeout(() => {
+                reabizTitleEle.style.display = 'none';
+                reabizContentEle.style.display = 'block';
+                window.setInterval(() => {
+                    reabizContentEle.classList.add('activeReabizContenet');
+                }, 1);
+            }, 10000);
+            window.setTimeout(() => {
+                reabizContentEle.style.display = 'none';
+            }, 54000);
+            window.setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>
