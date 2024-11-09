@@ -2,7 +2,7 @@
 import "./css/Home.css";
 
 import React, { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 
 import Button from "@mui/material/Button";
@@ -61,8 +61,8 @@ function Header() {
             <Space size={1} />
             <div style={styles.buttonWrap}>
                 <ButtonGroup size="large" aria-label="Large button group" variant="contained">
-                    <Button key="one" sx={styles.button}>自分について</Button>
-                    <Button key="two" sx={styles.button}>目次を見る！</Button>
+                    <Button key="one" sx={styles.button} component={Link} to="/about">自分について</Button>
+                    <Button key="two" sx={styles.button} component={Link} to="/index">目次を見る！</Button>
                 </ButtonGroup>
             </div>
             <Space size={5} />

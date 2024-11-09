@@ -79,13 +79,13 @@ function SocialLinks({ version }: { version: 'list' | 'menu' | 'btns' }) {
             <>
                 <Box sx={{textAlign: "center" as "center", marginTop: "1rem", opacity: "0.75"}}>
                     <ButtonGroup size="large" color='inherit'>
-                        <Button sx={buttonStyle} aria-label="open drawer" component={Link} to="/links">
+                        <Button sx={buttonStyle} aria-label="open drawer" component={Link} to="https://github.com/sonneko">
                             <GitHubIcon sx={iconStyle} />
                         </Button>
-                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="/links">
+                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="https://x.com/sonneko99">
                             <XIcon sx={iconStyle} />
                         </Button>
-                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="/links">
+                        <Button sx={buttonStyle} aria-label="open drawer"  component={Link} to="https://qiita.com/sonneko">
                             <QiitaIcon sx={iconStyle} />
                         </Button>
                     </ButtonGroup>
