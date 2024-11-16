@@ -1,0 +1,137 @@
+.btns {
+    position: absolute;
+    top: 75vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0 1rem;
+    white-space: nowrap;
+}
+
+.root-about{
+    margin: 20px;
+}
+
+.nav {
+    background-color: rgb(13, 110, 253);
+}
+
+.nav li a {
+    color: #ffffff;
+}
+
+.nav li a:focus {
+    color: #ffffff;
+}
+
+.nav li a:hover {
+    color: #ffffffaf;
+}
+
+.nav-link{
+    color: #ffffff;
+}
+.nav-link:focus{
+    color: #ffffffc6;
+}
+.nav-link:hover{
+    color: #ffffffc6;
+}
+.progress-box {
+    text-align: center;
+}
+
+.time-progress {
+    width: 90%;
+    height: 10px;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    /* プログレスバーの背景色/-moz- 用 */
+}
+
+::-webkit-progress-bar {
+    background-color: #fff;
+    /* プログレスバーの背景色/-webkit- 用 */
+}
+
+::-webkit-progress-value {
+    background-color: rgb(255, 130, 249);
+    /* プログレスバーの進捗部分色/-webkit- 用 */
+}
+
+::-moz-progress-bar {
+    background-color: rgb(255, 130, 249);
+    /* プログレスバーの進捗部分色/-moz- 用 */
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 5px;
+}
+
+progress::-ms-fill {
+    border-radius: 5px;
+}
+
+
+.yesornoBtn {
+    margin: 0 1rem;
+}
+
+.question-box {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: 97%;
+    height: 60vh;
+    background-color: rgb(13, 110, 253);
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px 67px -41px rgba(0, 0, 0, 0.75);
+}
+
+.question-content {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2rem;
+}
+
+@media screen and (min-width:600px) {
+    .test {
+        color: black;
+    }
+
+    .question-box {
+        width: 80%;
+    }
+
+    .btns {
+        padding: 1rem 5rem;
+    }
+
+    .yesornoBtn {
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .test {
+        color: pink;
+    }
+}
