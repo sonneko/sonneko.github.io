@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英単語覚えツール</title>
-    <script src="main.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +12,7 @@
 
 <body>
     <div id="root">
-        <ul class="nav">
+        <ul class="nav" style="display: none;">
             <li class="nav-item">
                 <div id="root-btn" class="nav-link">Home</div>
             </li>
@@ -28,10 +27,70 @@
             <div class="root-about">
                 <h1>単語覚えツール</h1>
                 <p>単語を覚えているかを確認するためのツールです。</p>
+                <div class="question-form">
+                    <div class="question-form-section">
+                        <h3>形式</h3>
+                        <div class="question-form-style">
+                            <select class="form-select" id="form-style" aria-label="Floating label select example">
+                                <option selected value="undefined">形式を選ぶ</option>
+                                <option value="text">テキストを入力する</option>
+                                <option value="select">選択する</option>
+                                <option value="check">チェックだけ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="question-form-section">
+                        <h3>方向</h3>
+                        <div class="question-form-style">
+                            <select class="form-select" id="form-direc" aria-label="Floating label select example">
+                                <option selected value="undefined">方向を選ぶ</option>
+                                <option value="enToJa">英語から日本語</option>
+                                <option value="jaToEn">日本語から英語</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="question-form-section">
+                        <h3>範囲</h3>
+                        <div class="question-form-style">
+                            <select class="form-select" id="form-range" aria-label="Floating label select example">
+                                <option selected value="undefined">範囲を選ぶ</option>
+                                <option value="custom">カスタム</option>
+                                <option value="all">全て</option>
+                                <option value="test1">601〜675（11/19単語テスト範囲）</option>
+                                <option value="test2">676〜750（11/26単語テスト範囲）</option>
+                                <option value="test3">751〜800（期末テスト範囲）</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 question-form-mini">
+                            <h6>カスタム範囲</h6>
+                            from<input type="text" class="form-control" id="form-range-custom-from">
+                            to<input type="text" class="form-control" id="form-range-custom-to">
+                        </div>
+                    </div>
+                    <div class="question-form-section">
+                        <h3>抽出</h3>
+                        <div class="question-form-style">
+                            <select class="form-select" id="form-selecting" aria-label="Floating label select example">
+                                <option selected value="undefined">抽出方法を選ぶ</option>
+                                <option value="all">範囲を全部出題</option>
+                                <option value="custom">範囲のうち何個かをランダムに出題</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 question-form-mini">
+                            <h6>出題個数</h6>
+                            <input type="text" class="form-control" id="form-selecting-custom-num">
+                        </div>
+                    </div>
+                    <div class="startBtn-box">
+                        <button id="startBtn" type="button"
+                            class="yesornoBtn btn btn-outline-primary btn-lg">設定を確認してテストを開始する</button>
+                    </div>
+                    <div id="form-error-display"></div>
+                </div>
             </div>
         </div>
         <div id="page-register">
-
+            <h1>カスタム単語登録機能は開発中です。</h1>
         </div>
         <div id="page-question">
             <div class="question-box">
@@ -47,11 +106,15 @@
                 <button type="button" class="yesornoBtn btn btn-outline-primary btn-lg">わかった</button>
                 <button type="button" class="yesornoBtn btn btn-outline-primary btn-lg">わからなかった</button>
             </div>
+            <div class="btns">
+                <input id="btns-textBox" type="text" class="form-control">
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
+<script src="main.js"></script>
 
 </html>

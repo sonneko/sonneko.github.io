@@ -7,7 +7,23 @@
     padding: 0 1rem;
     white-space: nowrap;
 }
+.question-form{
+    margin: 3rem 1rem;
+}
+.question-form-section{
+    margin: 1rem 0;
+}
+.question-form-mini{
+    margin: 1rem 1rem;
+}
+.question-form-mini input{
+    margin: 0 1rem;
+}
 
+.startBtn-box{
+    text-align: center;
+    margin: 5rem 0;
+}
 .root-about{
     margin: 20px;
 }
