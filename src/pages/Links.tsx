@@ -22,6 +22,12 @@ function Links() {
                                 ちょとだけチャットシステム
                             </Typography>
                         </ListItem>
+                        <ListItem>
+                            <Heading scale={3}>単語覚えツール</Heading>
+                            <Typography component="a" href="/tools/memorizing-words">
+                                単語覚えツール
+                            </Typography>
+                        </ListItem>
                     </List>
                 </Doc.DocumentWrapper>
             </Doc.Document>
