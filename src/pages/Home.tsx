@@ -13,9 +13,10 @@ import GlobalContext from "../global/globalContext";
 import Footer from "../docs/Footer";
 import Space from "../components/mini/Space";
 import Heading from "../components/mini/heading";
-import SocialLinks from "../components/SocialLinks";
+import   SocialLinks from "../components/SocialLinks";
 import Articles from "../components/Articles";
 import HobbyArea from "./components/Home/HobbysArea";
+import MutualLinks from "./components/Home/MutualLinks";
 
 function Header() {
     const globalContext = useContext(GlobalContext)
@@ -113,6 +114,11 @@ function Main() {
                     title: "SNS",
                     content: "SonnekoのSNS一覧です。ぜひ、フォローお願いいたします。",
                     customArea: <><SocialLinks version="btns"/></>
+                },
+                {
+                    title: "相互リンク",
+                    content: "相互リンクのお誘いはTwitterからお願いします。",
+                    customArea: <><MutualLinks /></>
                 },
                 {
                     title: "最近の記事",

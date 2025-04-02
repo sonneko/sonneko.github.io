@@ -11,6 +11,7 @@ import EachBlog from "./pages/blog/dynamic";
 import Develop from "./pages/Develop";
 import About from "./pages/about";
 import Index from "./pages";
+import MemorizingWords from "./pages/MemorizingWords";
 
 import SF2024Game from "./pages/game/sf2024/App";
 
@@ -35,7 +36,6 @@ function App() {
 
           {/* root directry pages */}
           <Route path="/intro" element={<Layout title="Introduce"><Intro /></Layout>} />
-          <Route path="/links" element={<Layout title="Links"><Links /></Layout>} />
           <Route path="/develop" element={<Layout title="Develop"><Develop /></Layout>} />
           <Route path="/about" element={<Layout title="About"><About /></Layout>} />
           <Route path="/index" element={<Layout title="index"><Index /></Layout>} />
@@ -47,6 +47,10 @@ function App() {
           {/* game pages */}
           <Route path="/games" element={<Layout title="games"><Game /></Layout>} />
           <Route path="/games/sf2024" element={<SF2024Game />} />
+
+          {/* tool page */}
+          <Route path="/links" element={<Layout title="Links"><Links /></Layout>} />
+          <Route path="/tools/memorizing-words" element={<Layout title="Memorizing Words"><MemorizingWords /></Layout>} />
 
           {/* 404 page */}
           <Route path="*" element={<Layout title="404 not found"><NotFound /></Layout>} />

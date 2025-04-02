@@ -17,13 +17,11 @@ function Links() {
                     <Heading scale={2}>一覧</Heading>
                     <List>
                         <ListItem>
-                            <Heading scale={3}>Web関係</Heading>
-                            <Typography variant="body1" gutterBottom>
-                                ちょとだけチャットシステム
+                            <Typography component="a" href="/chat">
+                                ちょっとだけチャットシステム
                             </Typography>
                         </ListItem>
                         <ListItem>
-                            <Heading scale={3}>単語覚えツール</Heading>
                             <Typography component="a" href="/tools/memorizing-words">
                                 単語覚えツール
                             </Typography>
