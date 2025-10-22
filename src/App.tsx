@@ -11,7 +11,6 @@ import EachBlog from "./pages/blog/dynamic";
 import Develop from "./pages/Develop";
 import About from "./pages/about";
 import Index from "./pages";
-import MemorizingWords from "./pages/MemorizingWords";
 
 import SF2024Game from "./pages/game/sf2024/App";
 
@@ -50,7 +49,6 @@ function App() {
 
           {/* tool page */}
           <Route path="/links" element={<Layout title="Links"><Links /></Layout>} />
-          <Route path="/tools/memorizing-words" element={<Layout title="Memorizing Words"><MemorizingWords /></Layout>} />
 
           {/* 404 page */}
           <Route path="*" element={<Layout title="404 not found"><NotFound /></Layout>} />
