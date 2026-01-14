@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "@sonneko/my-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,6 +13,11 @@
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.15.3",
+    "beercss": "^3.12.13",
+    "material-dynamic-colors": "^1.1.2",
     "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.93.3"
   }
 }

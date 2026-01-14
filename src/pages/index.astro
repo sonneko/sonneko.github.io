@@ -6,44 +6,92 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>I'm Sonneko.<img src="/fonts/icon.png" width="100" class="icon-image" /></h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				Welcome to the <a href="https://sonneko.aoristos.net/">Sonneko's portfolio</a>.
+				This homepage show you what Sonneko is all about.
 			</p>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				I'm a just high school student, loving and learning Information Tech. Please see my projects in <a href="https://github.com/sonneko">GitHub</a>.
+				Introductions of them are in this homepage, so please check them too.
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<p>Here are a few projects I'm in</p>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li><b>WebTCP</b>, new p2p protocol based on WebTCP DataChennel</li>
+				<li><b>programming-book</b>, small and systematic documents for programming beginners (Japanese lang only)</li>
+				<li>something of 3d FPS game (private repo)</li>
+				<li>New multi-paradigm, secure, explicit, and fast programming language interpreter (private repo)</li>
+				<li><b>life-game-studio</b>, social media enabling users to share pattern in Conway's Game of Life</li>
+				<li><b>air-keyboard</b>, unvisible phisical keyboards by AI powered hands tracking</li>
 			</ul>
+
+			<h3>My stacks</h3>
 			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				Here are my IT knowledges.
 			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Domain</th>
+						<th>Skills</th>
+						<th>Level</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Programming Language</td>
+						<td>Rust, TypeScript, Python...</td>
+						<td>Intermediate (maybe)</td>
+					</tr>
+					<tr>
+						<td>Web Development</td>
+						<td>React, Next.js, Svelte, Hono...</td>
+						<td>Data Row 2, Cell 3</td>
+					</tr>
+					<tr>
+						<td>Database</td>
+						<td>None</td>
+						<td>quite beginner</td>
+					</tr>
+					<tr>
+						<td>Cloud and Server less</td>
+						<td>Vercel, Cloudflare, Firebase...</td>
+						<td>beginner++</td>
+					</tr>
+					<tr>
+						<td>Low levels</td>
+						<td>Kernel, memory management, C language</td>
+						<td>beginner++</td>
+					</tr>
+					<tr>
+						<td>Other</td>
+						<td>language development, Network routing</td>
+						<td>beginner++</td>
+					</tr>
+				</tbody>
+			</table>
 			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				I'm interested in all subjects!
+			</p>
+
+			<h3>Contact</h3>
+			<p>
+				Please create a issue in <a href="https://github.com/sonneko/sonneko">This Repository</a>.
 			</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.icon-image {
+		margin-left: 15px;
+	}
+</style>
