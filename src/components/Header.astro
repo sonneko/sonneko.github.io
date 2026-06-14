@@ -10,6 +10,11 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div> -->
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/ja">ホーム</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+		</div>
 		<div class="social-links">
 			<a href="https://github.com/sonneko" target="_blank">
 				<span class="sr-only">Go to Sonneko's Github Profile</span>
@@ -22,11 +27,11 @@ import HeaderLink from './HeaderLink.astro';
 			</a>
 			<a href="https://zenn.dev/sonneko" target="_blank">
 				<span class="sr-only">Go to Sonneko's Zenn Profile</span>
-				<img src="fonts/zenn.svg" width="32" height="32" />
+				<img src="/fonts/zenn.svg" width="32" height="32" alt="Zenn" />
 			</a>
 			<a href="https://dev.to/ku_0dfe543e8243f19f5" target="_blank">
 				<span class="sr-only">Go to Sonneko's Dev.to Profile</span>
-				<img src="fonts/dev-to.svg" width="32" height="32" />
+				<img src="/fonts/dev-to.svg" width="32" height="32" alt="Dev.to" />
 			</a>
 		</div>
 	</nav>
@@ -50,6 +55,10 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav {
 		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 95%;
+		max-width: 900px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -57,9 +66,10 @@ import HeaderLink from './HeaderLink.astro';
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 		border: 0.5px solid #666;
 		border-radius: 20px;
-		padding: 0 70px;
+		padding: 0 1.5rem;
 		margin-top: 10px;
 		z-index: 100;
+		flex-wrap: wrap;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -74,9 +84,27 @@ import HeaderLink from './HeaderLink.astro';
 	.social-links a {
 		display: flex;
 	}
+	.internal-links {
+		display: flex;
+		gap: 0.5rem;
+	}
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav {
+			padding: 0.5rem 1rem;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+		h2 {
+			width: 100%;
+			text-align: center;
+			font-size: 0.9em;
+		}
+		.internal-links {
+			justify-content: center;
+			width: 100%;
 		}
 	}
 </style>
