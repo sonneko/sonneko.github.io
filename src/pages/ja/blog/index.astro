@@ -2,7 +2,7 @@
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
+import { SITE_TITLE_JA, SITE_DESCRIPTION_JA } from '../../../consts';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog', ({ data }) => {
@@ -15,7 +15,7 @@ const posts = (await getCollection('blog', ({ data }) => {
 <!doctype html>
 <html lang="ja">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE_JA} description={SITE_DESCRIPTION_JA} />
 		<style>
 			main {
 				width: 100%;

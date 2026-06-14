@@ -1,6 +1,8 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+
+const isJa = Astro.url.pathname.startsWith('/ja');
 ---
 
 <header>
@@ -13,7 +15,7 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/ja">ホーム</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href={isJa ? "/ja/blog" : "/blog"}>Blog</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/sonneko" target="_blank">
