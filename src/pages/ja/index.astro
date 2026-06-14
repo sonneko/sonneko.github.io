@@ -1,0 +1,92 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Sonneko です。<img src="/fonts/icon.png" width="100" class="icon-image" alt="Sonnekoのアイコン" /></h1>
+			<SocialLinks />
+
+			<p>
+				はじめまして、Sonneko（そんねこ）と申します。日本の高校生で、趣味でコンピュータサイエンスや数学を学んでいます。理論と実践の両方を大切にすることをモットーとしています。
+			</p>
+
+			<p>
+				これまでの活動として、科学の甲子園2025全国大会で8位入賞、リアビズ高校生起業グランプリで金賞をいただきました。また、学校から独立した高校生主体の自学団体 <a href="https://aoristos.net">Aoristos</a> の創設者でもあります。
+			</p>
+
+			<p>
+				数理関係の幅広い分野に興味を持っており、計算機科学、現代物理学、解析学を専門的に学んでいます。また、線形代数、AIの理論、コンパイラ開発、認知哲学、プログラミング言語設計、ブロックチェーンなどの分散アプリケーションについても独学を続けています。3Blue1Brown、ヨビノリ、ラムダ技術部といった理系Youtuberの方々の動画も参考にさせていただいています。
+			</p>
+
+			<h3>活動とOSS</h3>
+			<p>
+				インターネット上で幅広く活動しており、mdbookのバックエンドである <a href="https://github.com/sonneko/mdbook-sitemap">mdbook-sitemap</a> の開発など、OSS活動にも取り組んでいます。メイン言語は TypeScript と Rust ですが、必要に応じて Python なども使用します。現在は Go、Zig、Haskell にも興味を持ち、少しずつ勉強を進めています。
+			</p>
+
+			<p>
+				開発環境は、プログラミングを始めた当初から iPad の Safari 上で GitHub Codespaces を使用し、物理キーボードを繋いで開発しています。PCは持っていませんが、この環境で工夫しながら開発することを楽しんでいます。
+			</p>
+
+			<h3>プロジェクト</h3>
+			<ul>
+				<li><b>Hydent Lang</b>: 安全性と速度を重視した新しいプログラミング言語。 <a href="https://github.com/sonneko/hydent-lang">Repo</a></li>
+				<li><b>mdbook-sitemap</b>: mdBook用のsitemap.xml生成ツール。 <a href="https://github.com/sonneko/mdbook-sitemap">Repo</a></li>
+				<li><b>Air Keyboard</b>: Google MediaPipeを使用した、カメラによる仮想キーボード。 <a href="https://github.com/sonneko/air-keyboard">Repo</a></li>
+				<li><b>Investment Simulator</b>: GitHub ActionsとGeminiを活用した、LLMによる投資シミュレーター。 <a href="https://github.com/sonneko/investment-simulator">Repo</a></li>
+				<li><b>Programming Book</b>: プログラミングとCSの包括的な地図を目指した初心者向け教科書。 <a href="https://github.com/sonneko/programming-book">Repo</a></li>
+			</ul>
+
+			<h3>スキル・スタック</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>分野</th>
+						<th>技術・知識</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>言語</td>
+						<td>Rust, TypeScript, Python (学習中: Go, Zig, Haskell)</td>
+					</tr>
+					<tr>
+						<td>フロントエンド</td>
+						<td>Astro, Svelte, Next.js, Solid.js, Tailwind, Material Components</td>
+					</tr>
+					<tr>
+						<td>インフラ・ホスティング</td>
+						<td>Cloudflare, GitHub Pages, Vercel, GitHub Actions</td>
+					</tr>
+					<tr>
+						<td>その他</td>
+						<td>コンパイラ開発, WebRTC, LLM活用 (Gemini, Claude)</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>お問い合わせ</h3>
+			<p>
+				ご質問やご連絡がありましたら、<a href="https://github.com/sonneko/sonneko">こちらのレポジトリ</a> の Issue にてお気軽にお声がけください。
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.icon-image {
+		margin-left: 15px;
+		vertical-align: middle;
+	}
+</style>

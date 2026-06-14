@@ -7,99 +7,77 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>I'm Sonneko.<img src="/fonts/icon.png" width="100" class="icon-image" /></h1>
+			<h1>I'm Sonneko.<img src="/fonts/icon.png" width="100" class="icon-image" alt="Sonneko's icon" /></h1>
 			<SocialLinks />
+
 			<p>
-				Welcome to the <a href="https://sonneko.aoristos.net/">Sonneko's portfolio</a>.
-				This homepage shows you what Sonneko is all about.
+				Hello, I'm Sonneko, a high school student in Japan. I'm learning computer science and mathematics as a hobby, with a focus on both theory and practice.
 			</p>
+
 			<p>
-				I'm just a high school student, loving and learning Information Tech. Please see my projects in <a href="https://github.com/sonneko">GitHub</a>.
-				Introductions of them are in this homepage, so please check them too.
+				I was honored to receive 8th place at the Science Koshien 2025 (National Final) and the Gold Award at the "Rear Biz" High School Student Entrepreneurship Grand Prix. I am also the founder of <a href="https://aoristos.net">Aoristos</a>, an independent student-led self-study organization.
 			</p>
-			<p>Here are a few projects I'm working on</p>
+
+			<p>
+				My technical interests are broad, ranging from computer science and modern physics to analysis. I enjoy self-studying topics such as linear algebra, AI theory, compiler development, cognitive philosophy, programming language design, and decentralized applications (blockchain). I am often inspired by STEM YouTubers like 3Blue1Brown, Yobinori, and Lambda Tech, and I strive to combine theoretical learning with practical product development.
+			</p>
+
+			<h3>Recent Activities & OSS</h3>
+			<p>
+				I am active in the developer community and have contributed to OSS projects, such as developing the <a href="https://github.com/sonneko/mdbook-sitemap">mdbook-sitemap</a> backend. My primary languages are TypeScript and Rust, though I also use Python when appropriate. Currently, I am exploring Go, Zig, and Haskell.
+			</p>
+
+			<p>
+				I primarily use GitHub Codespaces on an iPad with a physical keyboard for my development environment. I often host my projects on GitHub Pages or Cloudflare, and use Vercel for SSR requirements.
+			</p>
+
+			<h3>Projects</h3>
 			<ul>
-				<li><b>Hydent Lang</b>, new programming language with a view to commercial one.
-				<li><b>WebTCP</b>, new p2p protocol based on WebTCP DataChannel</li>
-				<li><b>programming-book</b>, small and systematic documents for programming beginners (Japanese lang only)</li>
-				<li>something of 3d FPS game (private repo)</li>
-				<li>New multi-paradigm, secure, explicit, and fast programming language interpreter (private repo)</li>
-				<li><b>life-game-studio</b>, social media enabling users to share pattern in Conway's Game of Life</li>
-				<li><b>air-keyboard</b>, invisible physical keyboards by AI powered hands tracking</li>
+				<li><b>Hydent Lang</b>: A new programming language focused on safety and speed. <a href="https://github.com/sonneko/hydent-lang">Repo</a></li>
+				<li><b>mdbook-sitemap</b>: A tool to generate sitemap.xml for mdBook. <a href="https://github.com/sonneko/mdbook-sitemap">Repo</a></li>
+				<li><b>Air Keyboard</b>: A camera-based virtual keyboard using Google MediaPipe. <a href="https://github.com/sonneko/air-keyboard">Repo</a></li>
+				<li><b>Investment Simulator</b>: LLM-powered investment simulation using GitHub Actions and Gemini. <a href="https://github.com/sonneko/investment-simulator">Repo</a></li>
+				<li><b>Programming Book</b>: A comprehensive guide to CS and programming for beginners (in Japanese). <a href="https://github.com/sonneko/programming-book">Repo</a></li>
 			</ul>
 
-			<p>
-				Currently, I'm working for Hydent lang.<br />
-				<a href="https://github.com/sonneko/hydent-lang">Here is the repo</a>
-			</p>
-			<p>
-				Hydent lang is in the proof-of-concept stage.<br />
-				Now, the frontend has developed and it produces AST from Hydent source code.
-			</p>
-			<p>
-				It parses in about 650,000 lines/s. It's very fast!
-				<a href="https://sonneko.github.io/hydent-lang/bench/report">See benchmarks</a>
-			</p>
-
-			<h3>My stacks</h3>
-			<p>
-				Here are my IT knowledges.
-			</p>
+			<h3>Tech Stack</h3>
 			<table>
 				<thead>
 					<tr>
 						<th>Domain</th>
-						<th>Skills</th>
-						<th>Level</th>
+						<th>Technologies</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Programming Language</td>
-						<td>Rust, TypeScript, Python...</td>
-						<td>Intermediate (maybe)</td>
+						<td>Languages</td>
+						<td>Rust, TypeScript, Python (Learning: Go, Zig, Haskell)</td>
 					</tr>
 					<tr>
-						<td>Web Development</td>
-						<td>React, Next.js, Svelte, Hono...</td>
-						<td>Data Row 2, Cell 3</td>
+						<td>Frontend</td>
+						<td>Astro, Svelte, Next.js, Solid.js, Tailwind, Material Components</td>
 					</tr>
 					<tr>
-						<td>Database</td>
-						<td>None</td>
-						<td>quite beginner</td>
+						<td>Infrastructure</td>
+						<td>Cloudflare, GitHub Pages, Vercel, GitHub Actions</td>
 					</tr>
 					<tr>
-						<td>Cloud and Server less</td>
-						<td>Vercel, Cloudflare, Firebase...</td>
-						<td>advanced beginner</td>
-					</tr>
-					<tr>
-						<td>Low levels</td>
-						<td>Kernel, memory management, C language</td>
-						<td>advanced beginner</td>
-					</tr>
-					<tr>
-						<td>Other</td>
-						<td>language development, Network routing</td>
-						<td>advanced beginner</td>
+						<td>Others</td>
+						<td>Compiler Design, WebRTC, LLM Integration (Gemini, Claude)</td>
 					</tr>
 				</tbody>
 			</table>
-			<p>
-				I'm interested in all subjects!
-			</p>
 
 			<h3>Contact</h3>
 			<p>
-				Please create a issue in <a href="https://github.com/sonneko/sonneko">This Repository</a>.
+				If you have any questions or would like to get in touch, please feel free to open an issue in <a href="https://github.com/sonneko/sonneko">this repository</a>.
 			</p>
 		</main>
 		<Footer />
@@ -109,5 +87,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <style>
 	.icon-image {
 		margin-left: 15px;
+		vertical-align: middle;
 	}
 </style>

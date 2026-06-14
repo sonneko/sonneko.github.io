@@ -6,11 +6,11 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://sonneko.aoristos.net/',
 	integrations: [mdx(), sitemap()],
 	vite: {
 		ssr: {
-			noExternal: true,
+			noExternal: ['beercss', 'material-dynamic-colors'],
 		}
 	}
 });
