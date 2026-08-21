@@ -23,7 +23,7 @@ NPO法人 数理の翼
 **
 数理の翼夏季セミナー / 数理の翼ワークショップ / 数理の翼冬季セミナー / 数理の翼福岡セミナー
 www.npo-tsubasa.jp
-](https://www.npo-tsubasa.jp/)[](https://www.npo-tsubasa.jp/)
+](https://www.npo-tsubasa.jp/)
 
 結構罠なのが、これが数理の翼全体のサイトなので、申し込みとかは毎年新しくできるサイトを見ないといけないということです。
 
@@ -34,7 +34,7 @@ www.npo-tsubasa.jp
 **
 『数理科学に強い関心を抱く』高校生を対象とした4泊5日の合宿形式のセミナー。
 seminar.npo-tsubasa.jp
-](https://seminar.npo-tsubasa.jp/46/)[](https://seminar.npo-tsubasa.jp/46/)
+](https://seminar.npo-tsubasa.jp/46/)
 
 ### 全体的に…
 
@@ -100,7 +100,7 @@ Slackでの自己紹介を見ていくと、当たり前ですが、数学愛好
 **
 ピカリかがく 光化学の面白さを伝える ポータルサイト！
 pikari-kagaku.jp
-](https://pikari-kagaku.jp/)[](https://pikari-kagaku.jp/)
+](https://pikari-kagaku.jp/)
 
 そのあとは、ご飯食べて夜ゼミしてお風呂入って寝るという感じです。夜ゼミについては、後半でまとめて書きます。
 
@@ -196,7 +196,7 @@ pikari-kagaku.jp
 
 今回スタッフをしてくださっていたくるるさんも翼の元参加者で、第45回の人です。その時のことについて体験記を書かれているので、この記事と合わせて是非ご確認ください。
 
-[](https://note.com/kululu1027_/n/nb40eae016d9b)
+[くるるさんの記事](https://note.com/kululu1027_/n/nb40eae016d9b)
 
 その後は、フェアウェルパーティー・お風呂と続き、最後の夜ゼミです。
 
@@ -277,4 +277,4 @@ pikari-kagaku.jp
 
 リンクを開いたら、私の書いた応募文章が見れます。もしよかったら見てください。
 
-[](https://github.com/sonneko/sonneko/blob/main/others/wing46_note_article.md)
+[応募文章](https://github.com/sonneko/sonneko/blob/main/others/wing46_note_article.md)
