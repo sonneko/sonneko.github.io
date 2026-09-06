@@ -5,7 +5,7 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog', ({ data }) => data.lang === 'ja');
+	const posts = await getCollection('blog');
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: post,

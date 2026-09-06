@@ -94,6 +94,9 @@ input {
 }
 table {
 	width: 100%;
+	display: block;
+	overflow-x: auto;
+	max-width: 100%;
 	border-collapse: collapse;
 	border: 2px solid rgb(var(--gray-light));
 	border-radius: 8px;
@@ -101,7 +104,7 @@ table {
 th, td {
 	padding: 0.2em 0.6em;
 	border: 1px solid rgb(var(--gray-light));
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 img {
 	max-width: 100%;
@@ -116,6 +119,8 @@ code {
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
+	overflow-x: auto;
+	max-width: 100%;
 }
 pre > code {
 	all: unset;
@@ -136,6 +141,19 @@ hr {
 	}
 	main {
 		padding: 1em;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
+	h3 {
+		font-size: 1.4em;
+		margin-top: 1.5em;
+	}
+	th, td {
+		font-size: 1em;
 	}
 }
 

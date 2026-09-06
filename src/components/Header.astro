@@ -96,25 +96,29 @@ const { lang } = Astro.props;
 		gap: 0.5rem;
 	}
 	@media (max-width: 720px) {
+		header {
+			margin-bottom: 5rem;
+		}
 		.social-links {
 			display: none;
 		}
 		nav {
 			padding: 0.5rem 1rem;
-			justify-content: center;
+			justify-content: space-between;
+			align-items: center;
 			gap: 0.5rem;
 		}
 		nav a {
 			padding: 0.3em 0.5em;
 		}
 		h2 {
-			width: 100%;
-			text-align: center;
+			width: auto;
+			text-align: left;
 			font-size: 0.9em;
 		}
 		.internal-links {
-			justify-content: center;
-			width: 100%;
+			justify-content: flex-end;
+			width: auto;
 		}
 	}
 </style>
