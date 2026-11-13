@@ -1,0 +1,63 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title={`実績・執筆 | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header lang="ja" />
+		<main>
+			<h1>実績・執筆・活動</h1>
+			<p>
+				これまでに参加した競技・セミナー・コミュニティ活動、および各技術プラットフォームで公開している著書・記事のまとめです。
+			</p>
+
+			<h3>主な実績・イベント・コミュニティ</h3>
+			<ul>
+				<li>
+					<b>第15回 科学の甲子園（2025〜2026年）</b>: 予選で総合優勝を果たし、全国大会で<b>総合第8位</b>に入賞しました。
+				</li>
+				<li>
+					<b>第5回 リアビズ 高校生模擬起業グランプリ</b>: 自学団体 <a href="https://aoristos.net" target="_blank">Aoristos</a> としてファイナリストに選出され、<b>金賞</b>を受賞しました。
+				</li>
+				<li>
+					<b>第46回 数理の翼夏季セミナー（2026年8月）</b>: 選考を経て参加し、3時間のコンパイラゼミやLeanゼミを開催しました（<a href="/ja/blog/wing46-review/">参加体験記</a> / <a href="https://github.com/sonneko/sonneko/blob/main/others/wing46_note_article.md" target="_blank">応募文章</a>）。
+				</li>
+				<li>
+					<b>Aoristos</b>: 学校から独立した高校生主体の探究・自学団体の創設者の一人（<a href="https://aoristos.net" target="_blank">aoristos.net</a>）。
+				</li>
+			</ul>
+
+			<h3>著書・技術記事</h3>
+			<ul>
+				<li>
+					<b>Zenn Book</b>: <a href="https://zenn.dev/sonneko/books/4c66e31549640b" target="_blank">本気コンパイラ開発の日記【自作コンパイラで得られる知見】</a>（無料公開中の技術書・<a href="https://zenn.dev/sonneko/scraps/a3add1131bc4eb" target="_blank">読者コミュニティスクラップ</a>）
+				</li>
+				<li>
+					<b>Zenn 記事</b>（<a href="https://zenn.dev/sonneko" target="_blank">プロフィール</a>）:
+					<ul>
+						<li><a href="https://zenn.dev/sonneko/articles/004b051a805687" target="_blank">関数型って結局なんやねん！どないして活用せえっちゅうねん！</a>（2026-04）</li>
+						<li><a href="https://zenn.dev/sonneko/articles/f444436104a297" target="_blank">このAIエージェント時代にプログラミング言語に求められることは何か？</a>（2026-03）</li>
+						<li><a href="https://zenn.dev/sonneko/articles/38245312cde4a1" target="_blank">Rustで高速なコンパイラを作る最適化手法</a>（2025-12）</li>
+					</ul>
+				</li>
+				<li>
+					<b>Note</b>: <a href="https://note.com/sonneko/n/n7b43925b0459" target="_blank">第46回数理の翼夏季セミナー参加体験記</a>（2026-08）
+				</li>
+				<li>
+					<b>Dev.to</b>: <a href="https://dev.to/ku_0dfe543e8243f19f5/i-made-a-sitemap-generator-for-mdbook-it-was-my-first-time-releasing-a-crate-53ge" target="_blank">I made a sitemap generator for mdBook. It was my first time releasing a crate!</a>（2026-06）
+				</li>
+				<li>
+					<b>Qiita</b>: <a href="https://qiita.com/sonneko" target="_blank">@sonneko</a> — Rust製JSONパーサー、SQL/JS/Rustによる自作認証、Next.js静的サイトマップ生成、React Three Fiber などの技術記事を公開。
+				</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

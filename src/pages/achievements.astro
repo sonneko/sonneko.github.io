@@ -1,0 +1,63 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Achievements & Writing | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header lang="en" />
+		<main>
+			<h1>Achievements &amp; Writing</h1>
+			<p>
+				A summary of competitions, community activities, technical books, and articles published across platforms.
+			</p>
+
+			<h3>Competitions, Events &amp; Communities</h3>
+			<ul>
+				<li>
+					<b>15th Science Koshien (2025–2026)</b>: 1st Place Overall in the qualifying round and <b>8th Place</b> at the National Final.
+				</li>
+				<li>
+					<b>5th "ReaBiz" High School Student Entrepreneurship Grand Prix</b>: Finalist &amp; <b>Gold Award</b> recipient with <a href="https://aoristos.net" target="_blank">Aoristos</a>.
+				</li>
+				<li>
+					<b>46th Wing of Mathematics &amp; Science Summer Seminar (Aug 2026)</b>: Selected participant; hosted a 3-hour compiler seminar and a Lean seminar (<a href="/ja/blog/wing46-review/">Read reflection</a> / <a href="https://github.com/sonneko/sonneko/blob/main/others/wing46_note_article.md" target="_blank">Application essay</a>).
+				</li>
+				<li>
+					<b>Aoristos</b>: One of the founders of the independent student-led research and inquiry organization (<a href="https://aoristos.net" target="_blank">aoristos.net</a>).
+				</li>
+			</ul>
+
+			<h3>Technical Writing &amp; Publications</h3>
+			<ul>
+				<li>
+					<b>Zenn Book</b>: <a href="https://zenn.dev/sonneko/books/4c66e31549640b" target="_blank">本気コンパイラ開発の日記【自作コンパイラで得られる知見】</a> — Free technical book and <a href="https://zenn.dev/sonneko/scraps/a3add1131bc4eb" target="_blank">reader community scrap</a> on building compilers in Rust.
+				</li>
+				<li>
+					<b>Zenn Articles</b> (<a href="https://zenn.dev/sonneko" target="_blank">Profile</a>):
+					<ul>
+						<li><a href="https://zenn.dev/sonneko/articles/004b051a805687" target="_blank">関数型って結局なんやねん！どないして活用せえっちゅうねん！</a> (2026-04)</li>
+						<li><a href="https://zenn.dev/sonneko/articles/f444436104a297" target="_blank">このAIエージェント時代にプログラミング言語に求められることは何か？</a> (2026-03)</li>
+						<li><a href="https://zenn.dev/sonneko/articles/38245312cde4a1" target="_blank">Rustで高速なコンパイラを作る最適化手法</a> (2025-12)</li>
+					</ul>
+				</li>
+				<li>
+					<b>Note</b>: <a href="https://note.com/sonneko/n/n7b43925b0459" target="_blank">第46回数理の翼夏季セミナー参加体験記</a> (2026-08)
+				</li>
+				<li>
+					<b>Dev.to</b>: <a href="https://dev.to/ku_0dfe543e8243f19f5/i-made-a-sitemap-generator-for-mdbook-it-was-my-first-time-releasing-a-crate-53ge" target="_blank">I made a sitemap generator for mdBook. It was my first time releasing a crate!</a> (2026-06)
+				</li>
+				<li>
+					<b>Qiita</b>: <a href="https://qiita.com/sonneko" target="_blank">@sonneko</a> — Articles covering custom Rust JSON parsers, self-implemented authentication (Rust + SQL + JS), Next.js static sitemaps, and React Three Fiber.
+				</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
