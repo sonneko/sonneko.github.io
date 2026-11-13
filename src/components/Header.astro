@@ -12,11 +12,25 @@ const { lang } = Astro.props;
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href={lang === "ja" ? "/ja" : "/"}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/ja">ホーム</HeaderLink>
-			<HeaderLink href={lang === "en" ? "/blog" : "/ja/blog"}>Blog</HeaderLink>
+			{lang === "en" ? (
+				<>
+					<HeaderLink href="/">Home</HeaderLink>
+					<HeaderLink href="/projects">Projects</HeaderLink>
+					<HeaderLink href="/achievements">Achievements</HeaderLink>
+					<HeaderLink href="/blog">Blog</HeaderLink>
+					<HeaderLink href="/ja">JA</HeaderLink>
+				</>
+			) : (
+				<>
+					<HeaderLink href="/ja">ホーム</HeaderLink>
+					<HeaderLink href="/ja/projects">開発物</HeaderLink>
+					<HeaderLink href="/ja/achievements">実績・執筆</HeaderLink>
+					<HeaderLink href="/ja/blog">ブログ</HeaderLink>
+					<HeaderLink href="/">EN</HeaderLink>
+				</>
+			)}
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/sonneko" target="_blank">
@@ -93,23 +107,25 @@ const { lang } = Astro.props;
 	}
 	.internal-links {
 		display: flex;
-		gap: 0.5rem;
+		gap: 0.4rem;
+		flex-wrap: wrap;
 	}
 	@media (max-width: 720px) {
 		header {
-			margin-bottom: 5rem;
+			margin-bottom: 5.5rem;
 		}
 		.social-links {
 			display: none;
 		}
 		nav {
-			padding: 0.5rem 1rem;
+			padding: 0.5rem 0.9rem;
 			justify-content: space-between;
 			align-items: center;
-			gap: 0.5rem;
+			gap: 0.25rem;
 		}
 		nav a {
-			padding: 0.3em 0.5em;
+			padding: 0.2em 0.35em;
+			font-size: 0.85em;
 		}
 		h2 {
 			width: auto;
@@ -117,8 +133,9 @@ const { lang } = Astro.props;
 			font-size: 0.9em;
 		}
 		.internal-links {
-			justify-content: flex-end;
-			width: auto;
+			justify-content: flex-start;
+			gap: 0.2rem;
+			width: 100%;
 		}
 	}
 </style>
